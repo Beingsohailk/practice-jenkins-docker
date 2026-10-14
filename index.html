@@ -1,6 +1,102 @@
-<html>
-  <body style="font-family:Arial;text-align:center">
-    <h1>Hello from GitHub CI/CD!</h1>
-    <p>Iam Rockstar Baby oh yeh</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOHAIL BAGALI | DevOps Engineer</title>
+<meta name="description" content="Portfolio of Sohail Bagali, DevOps Engineer: cloud, CI/CD, automation, and an interactive DevOps command reference.">
+<meta name="theme-color" content="#0b1020">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="#home" aria-label="Sohail Bagali home">SOHAIL<span>.</span>DEVOPS</a>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#commands">DevOps Commands</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+    <a class="btn small" href="#contact">Let's Connect</a>
+  </nav>
+</header>
+
+<main id="main">
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">// DevOps Engineer</p>
+    <h1>Hi, I'm <span class="grad">Sohail Bagali</span></h1>
+    <p class="sub" aria-label="DevOps Engineer | Cloud | CI/CD | Automation"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+    <p class="lead">I build reliable infrastructure, automate deployment workflows, and explore cloud-native technologies to deliver scalable applications.</p>
+    <div class="actions">
+      <a class="btn" href="#commands">Explore Commands</a>
+      <a class="btn ghost" href="#projects">View Projects</a>
+      <a class="btn ghost" id="resumeBtn" href="resume.pdf" download>Download Resume</a>
+    </div>
+    <div class="socials"><a id="ghLink" href="#" target="_blank" rel="noopener">GitHub</a><a id="liLink" href="#" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+  <div class="term" role="img" aria-label="Demonstration terminal">
+    <div class="term-bar"><i></i><i></i><i></i><span>sohail@devops: ~ (demo only, not a real shell)</span></div>
+    <pre id="termBody" class="term-body" aria-live="off"></pre>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <h2>About</h2>
+  <p class="about" id="aboutText"></p>
+  <p class="note">Edit this paragraph in <code>CONFIG.about</code> inside script.js.</p>
+</section>
+
+<section id="commands" class="sec">
+  <h2>DevOps Command Center</h2>
+  <p class="muted">Pick a category, search, or filter by difficulty. Commands are for reference; nothing runs on your machine.</p>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Command categories"></div>
+  <div class="tools">
+    <label class="sr" for="q">Search commands</label>
+    <input id="q" type="search" placeholder="Search name, syntax, explanation, example...">
+    <label class="sr" for="lvl">Difficulty</label>
+    <select id="lvl"><option value="">All difficulties</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+    <span id="count" class="muted" role="status"></span>
+  </div>
+  <div id="cmds" class="grid"></div>
+  <p id="empty" class="empty" hidden>No commands match your search. Try another keyword, or reset the filters.</p>
+</section>
+
+<section id="projects" class="sec">
+  <h2>Projects</h2>
+  <p class="note">These are editable example projects, not verified achievements. Replace them in <code>CONFIG.projects</code>.</p>
+  <div id="projGrid" class="grid"></div>
+</section>
+
+<section id="skills" class="sec">
+  <h2>Skills</h2>
+  <div id="skillGrid" class="grid small"></div>
+</section>
+
+<section id="certs" class="sec">
+  <h2>Certifications</h2>
+  <p class="note">Entries are placeholders. Replace them with verified credentials in <code>CONFIG.certs</code>.</p>
+  <div id="certGrid" class="grid small"></div>
+</section>
+
+<section id="contact" class="sec">
+  <h2>Contact</h2>
+  <div class="contact">
+    <div class="actions"><a class="btn" id="mailBtn" href="#">Email Me</a><a class="btn ghost" id="li2" href="#" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" id="gh2" href="#" target="_blank" rel="noopener">GitHub</a></div>
+    <form id="form" novalidate>
+      <label for="name">Name</label><input id="name" name="name" autocomplete="name" required aria-describedby="e-name"><small id="e-name" class="err"></small>
+      <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><small id="e-email" class="err"></small>
+      <label for="msg">Message</label><textarea id="msg" name="message" rows="5" required aria-describedby="e-msg"></textarea><small id="e-msg" class="err"></small>
+      <button class="btn" type="submit">Send Message</button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p class="note">No backend is included. Set <code>CONFIG.formEndpoint</code> (e.g. a Formspree URL) to send via a form service; otherwise this opens your email app.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> SOHAIL BAGALI | DEVOPS ENGINEER</footer>
+<button id="top" class="top" aria-label="Back to top" hidden>↑</button>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
 </html>
+
